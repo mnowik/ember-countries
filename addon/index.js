@@ -6,6 +6,7 @@ export {
 
 export {
   countryIsoToValue,
+  countryIso3ToValue,
   isCountryWithState,
   isCountryWithoutZip
 } from "./utils/country-properties";

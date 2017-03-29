@@ -23,7 +23,7 @@ Three helpers are also available:
 ```js
 // lists of countries
 import {countries, countriesWithoutZip, countriesWithState} from 'ember-countries';
-import {countryIsoToValue, isCountryWithState, isCountryWithoutZip} from 'ember-countries';
+import {countryIsoToValue, isCountryWithState, isCountryWithoutZip, countryIso3ToValue} from 'ember-countries';
 
 // How to use lists
 export default Ember.Controller.extend({
@@ -34,6 +34,7 @@ export default Ember.Controller.extend({
 
 // Example that is using countryIsoToValue
 countryIsoToValue('FR'); // -> 'France'
+countryIso3ToValue('FRA'); // -> 'France'
 ```
 
 
