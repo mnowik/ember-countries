@@ -18,3 +18,8 @@ test('Check the length of list `countriesWithState`', function(assert) {
   var result = countriesWithState.length;
   assert.equal(result, 2);
 });
+
+test('Check the length of list `countries` with iso3', function(assert) {
+  var result = countries.filter((c) => c.iso3).length;
+  assert.equal(result, 249);
+});
