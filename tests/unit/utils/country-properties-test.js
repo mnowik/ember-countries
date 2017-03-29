@@ -1,4 +1,4 @@
-import {countryIsoToValue, isCountryWithoutZip, isCountryWithState} from 'ember-countries';
+import {countryIsoToValue, isCountryWithoutZip, isCountryWithState, countryIso3ToValue} from 'ember-countries';
 import { module, test } from 'qunit';
 
 
@@ -36,6 +36,44 @@ test('Test with `undefined` input', function(assert) {
 
 test('Test throw error with `number` input', function(assert) {
   assert.throws(() => {countryIsoToValue(3);}, TypeError);
+});
+
+
+
+module('Unit | Utility | country properties | countryIso3ToValue');
+
+test('Test with `US`', function(assert) {
+  var result = countryIso3ToValue('USA');
+  assert.equal(result, 'United States');
+});
+
+test('Test with `FR`', function(assert) {
+  var result = countryIso3ToValue('FRA');
+  assert.equal(result, 'France');
+});
+
+test('Test with incorrect iso', function(assert) {
+  var result = countryIso3ToValue('AAA');
+  assert.equal(result, 'AAA');
+});
+
+test('Test with `""` input', function(assert) {
+  var result = countryIso3ToValue('');
+  assert.equal(result, '');
+});
+
+test('Test with `null` input', function(assert) {
+  var result = countryIso3ToValue(null);
+  assert.equal(result, '');
+});
+
+test('Test with `undefined` input', function(assert) {
+  var result = countryIso3ToValue(undefined);
+  assert.equal(result, '');
+});
+
+test('Test throw error with `number` input', function(assert) {
+  assert.throws(() => {countryIso3ToValue(3);}, TypeError);
 });
 
 
