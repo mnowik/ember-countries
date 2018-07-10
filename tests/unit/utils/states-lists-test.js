@@ -1,4 +1,10 @@
-import { US_STATES_LIST, US_MILITARY_STATES_LIST, US_REQUIRING_CUSTOM_DECLARATION_STATES_LIST, CA_STATES_LIST, STATES_BY_COUNTRIES } from 'ember-countries';
+import {
+  US_STATES_LIST,
+  US_MILITARY_STATES_LIST,
+  US_REQUIRING_CUSTOM_DECLARATION_STATES_LIST,
+  CA_STATES_LIST,
+  STATES_BY_COUNTRIES
+} from 'ember-countries';
 import STATES_LIST_DEFAULT from 'ember-countries/utils/states-lists';
 import { module, test } from 'qunit';
 

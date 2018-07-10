@@ -1,8 +1,4 @@
-import Em from 'ember';
-
-const {
-  isNone
-  } = Em;
+import { isNone } from '@ember/utils';
 
 
 export function getFormat(val) {

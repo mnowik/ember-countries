@@ -1,4 +1,11 @@
-import { getState, getStatesForCountry, US_STATES_LIST, US_MILITARY_STATES_LIST, isCustomsDeclarationRequiredInUS, countryContainsState } from 'ember-countries';
+import {
+  getState,
+  getStatesForCountry,
+  US_STATES_LIST,
+  US_MILITARY_STATES_LIST,
+  isCustomsDeclarationRequiredInUS,
+  countryContainsState
+} from 'ember-countries';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | getState');

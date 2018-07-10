@@ -1,4 +1,8 @@
-import { getCountry, isCountryWithoutZip, isCountryWithState } from 'ember-countries';
+import {
+  getCountry,
+  isCountryWithoutZip,
+  isCountryWithState
+} from 'ember-countries';
 import { module, test } from 'qunit';
 
 

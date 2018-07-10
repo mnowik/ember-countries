@@ -1,4 +1,8 @@
-import { COUNTRIES_LIST, COUNTRIES_WITHOUT_ZIP_LIST, COUNTRIES_WITH_STATES_LIST } from 'ember-countries';
+import {
+  COUNTRIES_LIST,
+  COUNTRIES_WITHOUT_ZIP_LIST,
+  COUNTRIES_WITH_STATES_LIST
+} from 'ember-countries';
 import COUNTRIES_LIST_DEFAULT from 'ember-countries/utils/countries-lists';
 import { module, test } from 'qunit';
 
