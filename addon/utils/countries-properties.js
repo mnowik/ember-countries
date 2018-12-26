@@ -1,10 +1,6 @@
-import Em from 'ember';
+import { isNone } from '@ember/utils';
 import { COUNTRIES_LIST, COUNTRIES_WITHOUT_ZIP_LIST, COUNTRIES_WITH_STATES_LIST } from './countries-lists';
 import { getFormat, buildIndex } from './helpers';
-
-const {
-  isNone
-  } = Em;
 
 let indexedByIso2;
 let indexedByIso3;

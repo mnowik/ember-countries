@@ -1,55 +1,48 @@
 /*jshint node:true*/
-module.exports = {
-  scenarios: [
-    {
-      name: 'default',
-      bower: {
-        dependencies: { }
-      }
-    },
-    {
-      name: 'ember-1.13',
-      bower: {
-        dependencies: {
-          'ember': '~1.13.0'
+"use strict";
+
+const getChannelURL = require('ember-source-channel-url');
+
+module.exports = function() {
+  return Promise.all([
+    getChannelURL('release'),
+    getChannelURL('beta'),
+    getChannelURL('canary')
+  ]).then((urls) => {
+    return {
+      useYarn: true,
+      scenarios: [
+        {
+          name: 'ember-release',
+          npm: {
+            devDependencies: {
+              'ember-source': urls[0]
+            }
+          }
         },
-        resolutions: {
-          'ember': '~1.13.0'
-        }
-      }
-    },
-    {
-      name: 'ember-release',
-      bower: {
-        dependencies: {
-          'ember': 'components/ember#release'
+        {
+          name: 'ember-beta',
+          npm: {
+            devDependencies: {
+              'ember-source': urls[1]
+            }
+          }
         },
-        resolutions: {
-          'ember': 'release'
-        }
-      }
-    },
-    {
-      name: 'ember-beta',
-      bower: {
-        dependencies: {
-          'ember': 'components/ember#beta'
+        {
+          name: 'ember-canary',
+          npm: {
+            devDependencies: {
+              'ember-source': urls[2]
+            }
+          }
         },
-        resolutions: {
-          'ember': 'beta'
+        {
+          name: 'ember-default',
+          npm: {
+            devDependencies: {}
+          }
         }
-      }
-    },
-    {
-      name: 'ember-canary',
-      bower: {
-        dependencies: {
-          'ember': 'components/ember#canary'
-        },
-        resolutions: {
-          'ember': 'canary'
-        }
-      }
-    }
-  ]
+      ]
+    };
+  });
 };
