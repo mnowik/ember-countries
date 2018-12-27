@@ -1,15 +1,11 @@
-import Em from 'ember';
+import {A} from '@ember/array';
+import { isNone } from '@ember/utils';
+
 import { getFormat, buildIndex } from './helpers';
 import { getCountry, isCountryWithState } from './countries-properties';
 import { STATES_BY_COUNTRIES, US_REQUIRING_CUSTOM_DECLARATION_STATES_LIST } from './states-lists';
 
-const {
-  A,
-  isNone
-  } = Em;
-
 let indexedByIso2;
-
 
 export function getState(country, value) {
   let valueFormat = getFormat(value);
