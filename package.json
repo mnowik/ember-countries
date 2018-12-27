@@ -10,7 +10,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each",
-    "postinstall": "symlink-dir ./node_modules/@bower_components ./bower_components"
+    "postinstall": "mkdir -p bower_components && ln -sf ./node_modules/@bower_components/* ./bower_components/"
   },
   "repository": "https://github.com/mnowik/ember-countries",
   "engines": {
@@ -40,8 +40,7 @@
     "ember-source-channel-url": "^1.1.0",
     "ember-template-compiler": "^1.9.0-alpha",
     "ember-try": "^1.1.0",
-    "loader.js": "^4.7.0",
-    "symlink-dir": "^2.0.2"
+    "loader.js": "^4.7.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
