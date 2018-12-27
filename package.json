@@ -10,7 +10,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each",
-    "postinstall": "mkdir -p bower_components && ln -sf ./node_modules/@bower_components/* ./bower_components/"
+    "postinstall": "mkdir -p bower_components && find ./node_modules/@bower_components/* -type d -maxdepth 0 -exec ln -sf ../{} ./bower_components/ \\;"
   },
   "repository": "https://github.com/mnowik/ember-countries",
   "engines": {
