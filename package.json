@@ -9,8 +9,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each",
-    "postinstall": "if [ -d \"./node_modules/@bower_components\" ];\n then\n\t mkdir -p bower_components && find ./node_modules/@bower_components/* -type d -maxdepth 0 -exec ln -sf ../{} ./bower_components/ \\;\n fi;"
+    "test": "ember try:each"
   },
   "repository": "https://github.com/mnowik/ember-countries",
   "engines": {
@@ -28,8 +27,7 @@
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
-    "@bower_components/ember-template-compiler": "toranb/ember-template-compiler",
-    "bower-away": "^1.1.2",
+    "bower": "^1.8.4",
     "ember-cli": "^3.6.0",
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",

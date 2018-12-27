@@ -1,0 +1,6 @@
+{
+  "name": "ember-countries",
+  "dependencies": {
+    "ember-template-compiler": "toranb/ember-template-compiler#^1.8.0"
+  }
+}
