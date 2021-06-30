@@ -1,8 +1,4 @@
-import Em from 'ember';
-
-const {
-  A
-  } = Em;
+import {A} from '@ember/array';
 
 
 export const COUNTRIES_LIST = A([

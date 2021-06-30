@@ -1,9 +1,4 @@
-import Em from 'ember';
-
-const {
-  A
-  } = Em;
-
+import {A} from '@ember/array';
 
 /*********************
  United States lists
